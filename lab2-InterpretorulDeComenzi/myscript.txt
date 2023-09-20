@@ -1,0 +1,6 @@
+1. grep ^$USER /etc/passwd
+2. grep -v text1 fisier.txt | grep -v text2
+3. ls | wc -l - pentru numarul de elemente din director 
+    ls -l | grep ^d | wc -l   - pentru numarul de directoare din director
+
+    

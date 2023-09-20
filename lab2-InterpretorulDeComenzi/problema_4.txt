@@ -1,0 +1,9 @@
+for FNAME in *.c
+do
+    wc -l $FNAME 
+     FSIZE = `wc -l $FNAME | cut -f 1`
+     if test $FSIZE -gt 20
+     then 
+        echo $FNAME
+    fi
+done

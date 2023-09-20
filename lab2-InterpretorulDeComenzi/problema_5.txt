@@ -1,0 +1,20 @@
+for FNAME in *
+do
+    caracter=$1
+    if test caracter=="execute"
+    then 
+        caracter="x"
+    fi
+    adevarat=`ls -l | grep $FNAME | cut -d" " -f 1 | grep ${caracter::1}`
+    echo $adevarat
+    echo $FNAME
+    if test $adevarat != null
+    then
+        mkdir $FNAME.dir
+        valoare=`du -b $FNAME`
+        cd $FNAME.dir
+        touch size.txt
+        echo $valoare>size.txt
+        cd ~/probleme_lab
+    fi
+done
